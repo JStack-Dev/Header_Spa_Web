@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;700&family=Poppins:wght@300;400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #403c39;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  color: #264065;
+  text-decoration: underline;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #264065;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 16px;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.hero {
+  background-image: url('../img/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px; /* ajusta aquí la altura que quieras */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* ya estaba bien */
+  padding: 40px 40px 20px 40px; /* top, right, bottom, left */
+}
+
+
+
+.hero__content {
+  width: 55%;
+  padding-top: 30px;
+  transform: scale(0.75);        /* Escala todo el contenido al 85% */
+  transform-origin: top left;    /* Mantiene alineado arriba a la izquierda */
+}
+
+
+.hero__content h1 {
+  font-family: Poppins;
+  font-size: 50px;
+  line-height: 55px;
+  font-weight: 700;
+  color: #264065;
+  margin-bottom: 30px;
+}
+
+.hero__content p {
+  font-family: var(--font-text);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: #444;
+}
+
+/* ==== Botones ==== */
+.hero__content li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.hero__content a {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+
+/* Botón "Book Now" */
+.hero__content .btn {
+  background-color: #264065; 
+  color: #ffffff;             
+}
+
+.hero__content .btn:hover {
+  background-color: #264065;   
+  color: #ffffff;             
+}
+/* Botón "Watch Video" */
+.hero__content a:not(.btn) {
+  background-color: transparent;
+  color: #264065;            
+}
+
+/* Estilo para el enlace que contiene la imagen y el texto "Watch Video" */
+.watch-video-link {
+  display: flex;       /* Flexbox en línea para alinear imagen y texto */
+  align-items: center;        /* Centrado vertical de ambos elementos */
+  text-decoration: none;      /* Sin subrayado */
+  color: inherit;             /* Hereda el color del texto padre */
+  font-family: 'Poppins', sans-serif; /* Mantener fuente consistente */
+  font-weight: 600;           /* Un poco de negrita para mejor legibilidad */
+  cursor: pointer;            /* Indica que es clicable */
+  gap: 0;
+  
+}
+
+/* Imagen dentro del enlace */
+.watch-video-link img {
+  width: 120px;               /* Ancho fijo para la imagen */
+  height: 120px;              /* Alto fijo para la imagen */
+  margin-right: 0px;          /* Espacio entre imagen y texto */
+  vertical-align: middle;     /* Por si acaso, alineación vertical */
+  flex-shrink: 0;             /* Evita que la imagen se reduzca */
+  user-select: none;          /* Evita selección accidental de la imagen */
+  position: relative;
+  top: 15px;   /* Mueve la imagen 5px hacia abajo */
+}
+
+.watch-video-link span {
+  position: relative;
+  left: -30px; /* Mueve el texto 10px a la izquierda; ajusta este valor a tu gusto */
+}
+
+
+
+.hero__content .btn:hover {
+  background-color: #264065;   
+  color: #ffffff;             
+}
+
+
+.food-type {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+.food-type__item-img {
+  width: 90px;
+}
+.food-type__item-title {
+  color: #403c39;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.food-type__item-description {
+  color: #949494;
+  font-weight: 300;
+}
+
+nav.nav-primary ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+nav.nav-primary ul a {
+  color: #949494;
+  font-weight: 300;
+  text-decoration: none;
+}
+nav.nav-primary ul a.active, nav.nav-primary ul a:hover {
+  color: #264065;
+  position: relative;
+}
+nav.nav-primary ul a.active::before, nav.nav-primary ul a:hover::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: #264065;
+  width: 80%;
+  bottom: -10px;
+  left: 10%;
+}
+
+header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header__login ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+header .header__login ul .cart img {
+  width: 25px;
+}
+
+.container {
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden; /* <- Esta línea es la que bloquea el scroll */
+}
+
+
+
+.categories {
+  width: 500px;                   /* Ancho fijo */
+  height: 150px;                  /* Alto fijo */
+  background-color: #fff;         /* Fondo blanco */
+  border-radius: 12px;            /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);  /* Sombra sutil */
+
+  display: flex;                  /* Flexbox para fila */
+  justify-content: space-around;  /* Espacio uniforme entre artículos */
+  align-items: center;            /* Centrado vertical */
+
+  padding: 1rem 1.5rem;
+  position: fixed;                /* Posición fija para pegar a pantalla */
+  top: 475px;                     /* Desde arriba */
+  left: 150px;                       /* Pegado a la izquierda */
+  box-sizing: border-box;
+  z-index: 1000;                 /* Encima de otros elementos */
+}
+
+.categories article {
+  width: 30%;                          /* Cada artículo ocupa el 30% del ancho del contenedor */
+  min-height: 150px;                   /* Altura mínima igual para todos */
+  display: flex;                       /* Flexbox para alinear su contenido */
+  flex-direction: column;             /* Coloca img, h3 y p uno debajo del otro */
+  align-items: center;                /* Centra todo horizontalmente */
+  justify-content: center;            /* Centra el contenido verticalmente */
+  text-align: center;                 /* Centra el texto (afecta h3 y p) */
+  padding: 0.5rem;               /* Espaciado interno sutil */
+  
+  /* Visualmente limpio */
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.categories article img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.6rem;
+  object-fit: contain;
+}
+
+.categories article h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #222;
+}
+
+.categories article p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.img-superpuesta {
+  position: fixed;           /* Siempre visible, aunque se haga scroll */
+  top: 113px;                 /* Desde la parte superior */
+  right: 200px;               /* Desde la parte derecha */
+  width: 900px;               /* Tamaño de la imagen */
+  height: auto;
+  z-index: 50;             /* Por encima de todo */
+  pointer-events: none;      /* No bloquea clics en otros elementos */
+}
+
+
+/* TESTIMONIOS                   */
+/* ============================= */
+.testimonials-section {
+  position: relative;
+  height: 500px; /* o la altura que necesites */
+  width: 100%;   /* o un ancho fijo si quieres */
+  padding: 2rem;
+}
+
+
+
+/* Contenedor de testimonios en columna */
+.testimonials-staggered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+
+/* Tarjetas */
+.testimonial-card {
+  width: 100%;
+  max-width: 600px;
+  transition: all 0.3s ease;
+}
+
+/* Estilo común del bloque */
+
+
+
+/* Comillas */
+.testimonial-card .quote-icon {
+  width: 20px;
+  margin-bottom: 1rem;
+}
+
+/* Autor */
+.testimonial-card footer {
+  margin-top: 1rem;
+  font-weight: 700;
+  color: var(--rojo-intenso);
+  text-align: right;
+}
+
+.card-1, .card-2 {
+  position: absolute; /* Posiciona la tarjeta en un lugar exacto de la pantalla */
+  
+  max-width: 230px; /* No deja que la tarjeta sea más ancha que 230px */
+  
+  background: rgba(255, 255, 255, 0.2);
+
+  
+  backdrop-filter: blur(8px); /* Desenfoca lo que está detrás (efecto cristal) */
+  -webkit-backdrop-filter: blur(8px); /* Versión especial para navegadores WebKit (como Safari) */
+  
+  border-radius: 1rem; /* Bordes redondeados (como una caja suave) */
+  
+ padding: 15px 35px; /* 20px arriba/abajo, 35px a los lados */
+
+  
+  font-family: 'Poppins', sans-serif; /* Tipo de letra usada en el texto */
+  font-size: 2 rem;
+  
+  color: #000; /* Color del texto: negro */
+   
+  z-index: 100; /* Asegura que la tarjeta esté por encima de otros elementos */
+  
+}
+
+.card-1 img.quote-icon,
+.card-2 img.quote-icon {
+  display: block;          /* Para evitar espacios extra abajo */
+  max-width: 40px;         /* Tamaño adecuado para el ícono */
+  height: auto;            /* Mantener proporción */
+  margin-bottom: 10px;     /* Separación del texto */
+  position: relative;      /* Para stacking correcto */
+  z-index: 101;            /* Por encima del fondo borroso */
+}
+
+
+.card-name {
+  color: #264065;      /* Azul corporativo */
+}
+
+
+/* Posiciones */
+.card-1 {
+  top: -50%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  font-size: 0.6rem;
+}
+
+.card-2 {
+  top: -15%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  font-size: 0.6rem;
+}
+
+
+
